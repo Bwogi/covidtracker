@@ -1,22 +1,25 @@
+import React from 'react';
 import{
   Select,
   FormControl,
   MenuItem,
 } from "@material-ui/core";
-import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>COVID WORLDWIDE TRACKER</h1>
-      <FormControl className="app__dropdown" >
-        <select variant="outlined" value="abc" >
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Option 2</MenuItem>
-          <MenuItem value="worldwide">Option 3</MenuItem>
-        </select> 
-      </FormControl>
+      <div className="app__header">
+        <h1>Global COVID Real time TRACKER</h1>
+        <FormControl className="app__dropdown" >
+          <Select variant="outlined" value="abc" >
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Option 2</MenuItem>
+            <MenuItem value="worldwide">Option 3</MenuItem>
+          </Select> 
+        </FormControl>
+      </div>
+
 
       {/* Header */}
       {/* Worldwide Dropdown */}
