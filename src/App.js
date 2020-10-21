@@ -1,10 +1,25 @@
+import { FormControl, MenuItem } from '@material-ui/core';
 import React from 'react';
+import{
+  Select,
+  FormControl,
+  MenuItem,
+  Card,
+  CardContent
+} from "@material-ui/core";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Lets build a Covid 19 Worldwide Tracker</h1>
+      <h1>COVID WORLDWIDE TRACKER</h1>
+      <FormControl className="app__dropdown" >
+        <select variant="outlined" value="abc" >
+          <MenuItem value="worldwide">Worldwide</MenuItem>
+          <MenuItem value="worldwide">Worldwide</MenuItem>
+          <MenuItem value="worldwide">Worldwide</MenuItem>
+        </select> 
+      </FormControl>
 
       {/* Header */}
       {/* Worldwide Dropdown */}
@@ -14,7 +29,7 @@ function App() {
       {/* infobox */}
 
       {/* Map */}
-      
+
       {/* Table */}
       {/* Graph */}
 
