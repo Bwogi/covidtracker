@@ -2,8 +2,6 @@ import{
   Select,
   FormControl,
   MenuItem,
-  Card,
-  CardContent
 } from "@material-ui/core";
 import React from 'react';
 import './App.css';
@@ -15,8 +13,8 @@ function App() {
       <FormControl className="app__dropdown" >
         <select variant="outlined" value="abc" >
           <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Worldwide</MenuItem>
+          <MenuItem value="worldwide">Option 2</MenuItem>
+          <MenuItem value="worldwide">Option 3</MenuItem>
         </select> 
       </FormControl>
 
