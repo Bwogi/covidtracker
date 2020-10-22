@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <div className="app__header">
-        <h1>Global COVID Real time TRACKER</h1>
+        <h1>Global COVID Tracker(in real time)</h1>
         <FormControl className="app__dropdown" >
           <Select variant="outlined" onChange={onCountryChange} value={country} >
             <MenuItem value="worldwide">Worldwide</MenuItem>
