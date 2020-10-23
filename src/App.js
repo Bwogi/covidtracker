@@ -28,9 +28,6 @@ function App() {
 
   const onCountryChange = (event) =>{
     const countryCode = event.target.value;
-
-    console.log("Y0000 >>>>>", countryCode);
-
     setCountry(countryCode);
   }
 
@@ -52,9 +49,15 @@ function App() {
       {/* Header */}
       {/* Worldwide Dropdown */}
 
-      {/* infobox */}
-      {/* infobox */}
-      {/* infobox */}
+      <div className="app__stats">
+        {/* infobox title="Corona virus cases"*/}
+        {/* infobox title="Corona virus deaths"*/}
+        {/* infobox title="Corona virus recoveries"*/}
+        {/* infobox */}
+        {/* infobox */}
+        
+      </div>
+
 
       {/* Map */}
 
