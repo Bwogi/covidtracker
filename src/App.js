@@ -26,8 +26,12 @@ function App() {
   
   },[]);
 
-  const onCountryChange = async(event) =>{
+  const onCountryChange = (event) =>{
     const countryCode = event.target.value;
+
+    console.log("Y0000 >>>>>", countryCode);
+
+    setCountry(countryCode);
   }
 
   return (
