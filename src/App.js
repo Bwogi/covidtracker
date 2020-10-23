@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import{ Select,FormControl,MenuItem } from "@material-ui/core";
-import './App.css';
+import InfoBox from "./infoBox";
+import "./App.css";
 
 function App() {
   //to loop through th countries, we need to use state
@@ -51,8 +52,11 @@ function App() {
 
       <div className="app__stats">
         {/* infobox title="Corona virus cases"*/}
+        <InfoBox title="Coronavirus Cases" cases={1234} total={2000} />
         {/* infobox title="Corona virus deaths"*/}
+        <InfoBox title="Coronavirus Deaths" cases={123} total={3000} />
         {/* infobox title="Corona virus recoveries"*/}
+        <InfoBox title="Coronavirus Recoveries" cases={12345} total={2500} />
         {/* infobox */}
         {/* infobox */}
         
