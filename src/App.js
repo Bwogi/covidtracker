@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import{ Select,FormControl,MenuItem } from "@material-ui/core";
 import InfoBox from "./infoBox";
 import "./App.css";
+import Map from "./Map";
 
 function App() {
   //to loop through th countries, we need to use state
@@ -35,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <div className="app__header">
-        <h1>Global Real-Time Tracker(GRTT-Covid19)</h1>
+        <h1>GPRTT-Covid19</h1><p>Global Pandemic Realtime Tracker for Covid19</p>
         <FormControl className="app__dropdown" >
           <Select variant="outlined" onChange={onCountryChange} value={country} >
             <MenuItem value="worldwide">Worldwide</MenuItem>
@@ -46,17 +47,18 @@ function App() {
         </FormControl>
       </div>
 
-
       {/* Header */}
       {/* Worldwide Dropdown */}
-
+&nbsp;
+&nbsp;
+&nbsp;
       <div className="app__stats">
         {/* infobox title="Corona virus cases"*/}
-        <InfoBox title="Coronavirus Cases" cases={1234} total={2000} />
+        <InfoBox title="Cases" cases={1234} total={2000} />
         {/* infobox title="Corona virus deaths"*/}
-        <InfoBox title="Coronavirus Deaths" cases={123} total={3000} />
+        <InfoBox title="Deaths" cases={123} total={3000} />
         {/* infobox title="Corona virus recoveries"*/}
-        <InfoBox title="Coronavirus Recoveries" cases={12345} total={2500} />
+        <InfoBox title="Recovered" cases={12345} total={2500} />
         {/* infobox */}
         {/* infobox */}
         
@@ -64,6 +66,7 @@ function App() {
 
 
       {/* Map */}
+      <Map />
 
       {/* Table */}
       {/* Graph */}
