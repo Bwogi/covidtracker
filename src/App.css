@@ -13,5 +13,6 @@ body{
 
 .app__stats{
   display: flex;
+  justify-content: space-between;
 
 }
