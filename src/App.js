@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import{ Select,FormControl,MenuItem } from "@material-ui/core";
+import{ Select,FormControl,MenuItem, Card, CardContent } from "@material-ui/core";
 import InfoBox from "./infoBox";
 import "./App.css";
 import Map from "./Map";
@@ -53,24 +53,30 @@ function App() {
       &nbsp;
       &nbsp;
       &nbsp;
-      <div className="app__stats">
-        {/* infobox title="Corona virus cases"*/}
-        <InfoBox title="Cases" cases={1234} total={2000} />
-        {/* infobox title="Corona virus deaths"*/}
-        <InfoBox title="Deaths" cases={123} total={3000} />
-        {/* infobox title="Corona virus recoveries"*/}
-        <InfoBox title="Recovered" cases={12345} total={2500} />
-        {/* infobox */}
-        {/* infobox */}
-      </div>
+        <div className="app__stats">
+          {/* infobox title="Corona virus cases"*/}
+          <InfoBox title="Cases" cases={1234} total={2000} />
+          {/* infobox title="Corona virus deaths"*/}
+          <InfoBox title="Deaths" cases={123} total={3000} />
+          {/* infobox title="Corona virus recoveries"*/}
+          <InfoBox title="Recovered" cases={12345} total={2500} />
+          {/* infobox */}
+          {/* infobox */}
+        </div>
           {/* Map */}
           <Map />
       </div>
       
-      <div className="app__right">
-        {/* Table */}
-        {/* Graph */}
-      </div>
+      <Card className="app__right">
+        <CardContent>
+
+          <h3>Live Cases by Country</h3>
+          {/* Table */}
+          <h3>Worldwide new Cases</h3>
+          {/* Graph */}
+        </CardContent>
+
+      </Card>
 
 
 
