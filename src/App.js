@@ -35,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="app__left">
       <div className="app__header">
         <h1>GPRTT-Covid19</h1><p>Global Pandemic Realtime Tracker for Covid19</p>
         <FormControl className="app__dropdown" >
@@ -49,9 +50,9 @@ function App() {
 
       {/* Header */}
       {/* Worldwide Dropdown */}
-&nbsp;
-&nbsp;
-&nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
       <div className="app__stats">
         {/* infobox title="Corona virus cases"*/}
         <InfoBox title="Cases" cases={1234} total={2000} />
@@ -61,15 +62,18 @@ function App() {
         <InfoBox title="Recovered" cases={12345} total={2500} />
         {/* infobox */}
         {/* infobox */}
-        
+      </div>
+          {/* Map */}
+          <Map />
+      </div>
+      
+      <div className="app__right">
+        {/* Table */}
+        {/* Graph */}
       </div>
 
 
-      {/* Map */}
-      <Map />
 
-      {/* Table */}
-      {/* Graph */}
 
 
     </div>
