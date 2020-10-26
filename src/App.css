@@ -4,6 +4,9 @@
 body{
   background-color: #f5f6fa;
 }
+.app{
+  display: flex;
+}
 .app__header{
   display: flex;
   align-items: center;
@@ -14,8 +17,4 @@ body{
 .app__stats{
   display: flex;
   justify-content: space-between;
-}
-
-.try{
-  display: flex;
 }

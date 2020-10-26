@@ -34,54 +34,35 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <div className="app__left">
-      <div className="app__header">
-        <h1>GPRTT-Covid19</h1><p>Global Pandemic Realtime Tracker for Covid19</p>
-        <FormControl className="app__dropdown" >
-          <Select variant="outlined" onChange={onCountryChange} value={country} >
-            <MenuItem value="worldwide">Worldwide</MenuItem>
-            {countries.map((country) => (
-                <MenuItem value={country.value}>{country.name}</MenuItem>
-              ))}
-          </Select> 
-        </FormControl>
+          <div className="app__header">
+                  <h1>GPRTT-Covid19</h1><p>Global Pandemic Realtime Tracker for Covid19</p>
+                  <FormControl className="app__dropdown" >
+                    <Select variant="outlined" onChange={onCountryChange} value={country} >
+                      <MenuItem value="worldwide">Worldwide</MenuItem>
+                      {countries.map((country) => (
+                          <MenuItem value={country.value}>{country.name}</MenuItem>
+                        ))}
+                    </Select> 
+                  </FormControl>
+          </div>
+          <div className="app__stats">
+                  <InfoBox title="Cases" cases={1234} total={2000} />
+                  <InfoBox title="Deaths" cases={123} total={3000} />
+                  <InfoBox title="Recovered" cases={12345} total={2500} />
+          </div>
+                {/* Map */}
+          <Map /> 
       </div>
-
-      {/* Header */}
-      {/* Worldwide Dropdown */}
-      &nbsp;
-      &nbsp;
-      &nbsp;
-        <div className="app__stats">
-          {/* infobox title="Corona virus cases"*/}
-          <InfoBox title="Cases" cases={1234} total={2000} />
-          {/* infobox title="Corona virus deaths"*/}
-          <InfoBox title="Deaths" cases={123} total={3000} />
-          {/* infobox title="Corona virus recoveries"*/}
-          <InfoBox title="Recovered" cases={12345} total={2500} />
-          {/* infobox */}
-          {/* infobox */}
-        </div>
-          {/* Map */}
-          <Map />
-      </div>
-      
       <Card className="app__right">
-        <CardContent>
-
-          <h3>Live Cases by Country</h3>
-          {/* Table */}
-          <h3>Worldwide new Cases</h3>
-          {/* Graph */}
-        </CardContent>
-
+            <CardContent>
+                <h3>Live Cases by Country</h3>
+                    {/* Table */}
+                <h3>Worldwide new Cases</h3>
+                    {/* Graph */}
+            </CardContent>
       </Card>
-
-
-
-
-
     </div>
   );
 }
