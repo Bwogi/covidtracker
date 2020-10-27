@@ -8,6 +8,7 @@ function App() {
   //to loop through th countries, we need to use state
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
+  const [countryInfo,setCountryInfo] = useState({});
 
   useEffect(() => {
     //async means(->) send a request, wait for it, 
@@ -28,10 +29,27 @@ function App() {
   
   },[]);
 
-  const onCountryChange = (event) =>{
+  const onCountryChange = async(event) =>{
     const countryCode = event.target.value;
     setCountry(countryCode);
-  }
+
+    //lets activate the data
+    const url = countryCode === 'worldwide' 
+                                ? 'https://disease.sh/v3/covid-19/all'
+                                : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+
+    await fetch(url) //fetch the response from above
+    .then(response => response.json()) //then get the response and turn it into a json object data
+    .then(data => {  //then with the data
+      setCountry(countryCode);
+
+      //all of the data...
+      //from the country response
+      setCountryInfo(data);
+    });
+  };
+
+  console.log("COUNTRY INFO >>>", countryInfo);
 
   return (
     <div className="app">
@@ -48,9 +66,9 @@ function App() {
                   </FormControl>
           </div>
           <div className="app__stats">
-                  <InfoBox title="Cases" cases={1234} total={2000} />
-                  <InfoBox title="Deaths" cases={123} total={3000} />
-                  <InfoBox title="Recovered" cases={12345} total={2500} />
+                  <InfoBox title="Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
+                  <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+                  <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
           </div>
                 {/* Map */}
           <Map /> 
