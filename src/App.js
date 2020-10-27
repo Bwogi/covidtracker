@@ -5,6 +5,7 @@ import "./App.css";
 import Map from "./Map";
 import Table from "./Table"
 import { sortData } from "./utils";
+import LineGraph from './LineGraph';
 
 function App() {
   //to loop through the countries, we need to use state
@@ -69,7 +70,7 @@ function App() {
     <div className="app">
       <div className="app__left">
           <div className="app__header">
-                  <h1>GPRTT-Covid19</h1><p>Global Pandemic Realtime Tracker for Covid19</p>
+                  <h3>Global Pandemic (real-time) Reports-GPR(Covid19)</h3> 
                   <FormControl className="app__dropdown" >
                     <Select variant="outlined" onChange={onCountryChange} value={country} >
                       <MenuItem value="worldwide">Worldwide</MenuItem>
@@ -80,8 +81,8 @@ function App() {
                   </FormControl>
           </div>
           <div className="app__stats">
-                  <InfoBox title="Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
-                  <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
+                  <InfoBox title="Reported Cases" cases={countryInfo.todayCases} total={countryInfo.cases} />
+                  <InfoBox title="Reported Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
                   <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
           </div>
                 {/* Map */}
@@ -94,6 +95,7 @@ function App() {
                     <Table countries={tableData}/>
                 <h3>Worldwide new Cases</h3>
                     {/* Graph */}
+                    <LineGraph />
             </CardContent>
       </Card>
     </div>
