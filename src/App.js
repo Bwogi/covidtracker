@@ -4,6 +4,7 @@ import InfoBox from "./infoBox";
 import "./App.css";
 import Map from "./Map";
 import Table from "./Table"
+import { sortData } from "./utils";
 
 function App() {
   //to loop through the countries, we need to use state
@@ -32,7 +33,9 @@ function App() {
             name: country.country,
             value: country.countryInfo.iso2,
           }));
-          setTableData(data);
+
+          const sortedData = sortData(data);
+          setTableData(sortedData);
           setCountries(countries);
       });
     };
