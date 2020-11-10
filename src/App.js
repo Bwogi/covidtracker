@@ -3,9 +3,9 @@ import{ Select,FormControl,MenuItem, Card, CardContent } from "@material-ui/core
 import InfoBox from "./infoBox";
 import "./App.css";
 import Map from "./Map";
-import Table from "./Table"
+import Table from "./Table";
 import { sortData } from "./utils";
-import LineGraph from './LineGraph';
+//import LineGraph from './LineGraph';
 
 function App() {
   //to loop through the countries, we need to use state
@@ -49,9 +49,7 @@ function App() {
     setCountry(countryCode);
 
     //lets activate the data
-    const url = countryCode === 'worldwide' 
-                                ? 'https://disease.sh/v3/covid-19/all'
-                                : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
+    const url = countryCode === 'worldwide' ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
 
     await fetch(url) //fetch the response from above
     .then(response => response.json()) //then get the response and turn it into a json object data
@@ -94,8 +92,8 @@ function App() {
                     {/* Table */}
                     <Table countries={tableData}/>
                 <h3>Worldwide new Cases</h3>
-                    {/* Graph */}
-                    <LineGraph />
+                    {/* Graph <LineGraph /> */}
+                  
             </CardContent>
       </Card>
     </div>
