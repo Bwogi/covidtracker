@@ -1,12 +1,12 @@
 import React from 'react'
 
-function LineGraph() {
+function BarChart() {
     return (
         <div>
             <p>---</p>
-            <p>Line Graph here</p>
+            <h3>bar chart</h3>
         </div>
     )
 }
 
-export default LineGraph
+export default BarChart

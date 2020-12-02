@@ -19,6 +19,7 @@ body{
 .app__stats{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .app__left{

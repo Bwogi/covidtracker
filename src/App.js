@@ -5,7 +5,8 @@ import "./App.css";
 import Map from "./Map";
 import Table from "./Table";
 import { sortData } from "./utils";
-//import LineGraph from './LineGraph';
+import BarChart from "./BarChart";
+import LineGraph from './LineGraph';
 
 function App() {
   //to loop through the countries, we need to use state
@@ -83,19 +84,27 @@ function App() {
                   <InfoBox title="Reported Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} />
                   <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={countryInfo.recovered} />
           </div>
+          <Card>
+            <CardContent>
                 {/* Map */}
-          <Map /> 
+                <Map /> 
+            </CardContent>
+          </Card>
       </div>
       <Card className="app__right">
             <CardContent>
                 <h3>Live Cases by Country</h3>
                     {/* Table */}
                     <Table countries={tableData}/>
-                <h3>Worldwide new Cases</h3>
+                    <h3>Worldwide new Cases</h3>
+                    {/* Graph  */}
                     <LineGraph />
-                  
+                    {/* Bar Chart  */}
+                    <BarChart />
+
             </CardContent>
       </Card>
+
     </div>
   );
 }
