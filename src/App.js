@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import{ Select,FormControl,MenuItem, Card, CardContent } from "@material-ui/core";
+import{ Select,
+        FormControl,
+        MenuItem,
+        Card,
+        CardContent,
+       } from "@material-ui/core";
 import InfoBox from "./infoBox";
 import "./App.css";
 import Map from "./Map";
 import Table from "./Table";
 import { sortData } from "./utils";
 import BarChart from "./BarChart";
-import LineGraph from './LineGraph';
+//import LineGraph from "./LineGraph";
 
 function App() {
   //to loop through the countries, we need to use state
@@ -98,7 +103,7 @@ function App() {
                     <Table countries={tableData}/>
                     <h3>Worldwide new Cases</h3>
                     {/* Graph  */}
-                    <LineGraph />
+                    {/*<LineGraph /> */}
                     {/* Bar Chart  */}
                     <BarChart />
 
